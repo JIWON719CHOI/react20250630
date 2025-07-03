@@ -22,7 +22,7 @@ function MyComp1() {
     nextPerson.address.country = e.target.value;
     setPerson(nextPerson);
   }
-  function handleSaveClick(e) {
+  function handleSaveClick() {
     const nextHistory = [...history];
     nextHistory.push(person);
     setHistory(nextHistory);
@@ -95,7 +95,7 @@ function MyComp2() {
     nextPerson.address.country = e.target.value;
     setPerson(nextPerson);
   }
-  function handleSaveClick(e) {
+  function handleSaveClick() {
     const nextHistory = [...history];
     nextHistory.push(person);
     setHistory(nextHistory);
@@ -149,9 +149,9 @@ function MyComp2() {
 function App32() {
   return (
     <div>
-      {/*얕은 복사 ❌*/}
-      <MyComp1 />
       {/*깊은 복사 ⭕*/}
+      <MyComp1 />
+      {/*얕은 복사 ❌*/}
       <MyComp2 />
     </div>
   );
